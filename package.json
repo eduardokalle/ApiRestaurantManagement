@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon node index.js"
-
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,9 @@
     "rest",
     "api",
     "sequelize",
-    "mysql"
+    "mysql",
+    "jwt",
+    "authentication"
   ],
   "author": "",
   "license": "Edo Calle",
@@ -27,10 +28,12 @@
   },
   "homepage": "https://github.com/eduardokalle/APIProject#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",

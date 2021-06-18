@@ -3,26 +3,26 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
+    // Create a new task
     router.post("/", task.create);
   
-    // Retrieve all Tutorials
+    // Retrieve all task
     router.get("/", task.findAll);
   
-    // Retrieve all published Tutorials
+    // Retrieve all published task
     router.get("/published", task.findAllPublished);
   
-    // Retrieve a single Tutorial with id
+    // Retrieve a single task with id
     router.get("/:id", task.findOne);
   
-    // Update a Tutorial with id
+    // Update a task with id
     router.put("/:id", task.update);
   
-    // Delete a Tutorial with id
+    // Delete a task with id
     router.delete("/:id", task.delete);
   
-    // Delete all Tutorials
+    // Delete all task
     router.delete("/", task.deleteAll);
   
     app.use('/api/tasks', router);
-  };
+  };  
