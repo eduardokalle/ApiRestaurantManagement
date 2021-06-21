@@ -1,0 +1,44 @@
+paths:
+  /tasks/{taskId}:
+    get:
+      summary: Returns a task by ID.
+      parameters:
+        - name: taskId
+          in: path
+          required: true
+          description: The ID of the task to return.
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+      responses:
+        '200':
+          description: data task
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    example: 4
+                  title:
+                    type: string
+                    example: tarea 134
+                  description:
+                    type: string
+                    example: tareas asignadas para el primer periodo
+                  published:
+                    type: bolean
+                    example: true    
+                  createdAt:
+                    type: string
+                    example: 2021-06-16T05:44:04.000Z   
+                  updatedAt:
+                    type: string
+                    example: 2021-06-16T05:44:04.000Z  
+        '500':
+            description: Error retrieving Task with id
+        default:
+            description: Unexpected error

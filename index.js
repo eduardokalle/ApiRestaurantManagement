@@ -1,3 +1,4 @@
+
 const express = require("express");
 const cors = require("cors");
 
@@ -40,6 +41,7 @@ function initial() {
 initial();
 */
 
+// db
 db.sequelize.sync();
 
 // simple route
@@ -47,9 +49,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to API Base Project." });
 });
 
-require("./app/routes/task.routes")(app);
+//require routes
+require('./app/routes/task.routes')(app);
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require('./app/routes/swagger.routes')(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

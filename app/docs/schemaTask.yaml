@@ -1,0 +1,36 @@
+
+  components:
+    schemas:
+      Task:
+        type: object
+        required:
+          - title
+          - description
+          - published
+        properties:
+          id:
+            type: integer
+            description: The auto-generated id of the task.
+          title:
+            type: string
+            description: The title of your task.
+          description:
+            type: string
+            description: Description the task?
+          published:
+            type: boolean
+            description: Have you finished reading it?
+          createdAt:
+            type: string
+            format: date
+            description: The date of the record creation.
+          updateAt:
+            type: string
+            format: date
+            description: The date of the record update.
+        example:
+          title: Task 16579
+          description: Task update information
+          published: true
+
+
