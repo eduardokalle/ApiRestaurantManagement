@@ -32,5 +32,67 @@
           title: Task 16579
           description: Task update information
           published: true
+      User:
+        type: object
+        required:
+          - username
+          - email
+          - password
+        properties:
+          id:
+            type: integer
+            description: The auto-generated id of the task.
+          username:
+            type: string
+            description: The username.
+          email:
+            type: string
+            description: username email
+          password:
+            type: string
+            description: password username
+          createdAt:
+            type: string
+            format: date
+            description: The date of the record creation.
+          updateAt:
+            type: string
+            format: date
+            description: The date of the record update.
+        example:
+          username: jniodfn943
+          email: email@gmail.com
+          password: 827s34ddfs
+      Wall:
+        type: object
+        required:
+          - username
+          - body
+          - image
+        properties:
+          id:
+            type: integer
+            description: The auto-generated id of the task.
+          username:
+            type: string
+            description: The username.
+          body:
+            type: string
+            description: body of msessage 
+          image:
+            type: string
+            description: ext the image
+          createdAt:
+            type: string
+            format: date
+            description: The date of the record creation.
+          updateAt:
+            type: string
+            format: date
+            description: The date of the record update.
+        example:
+          username: jniodfn943
+          body: last my phone in the park
+          image: image354t.jpg          
 
 

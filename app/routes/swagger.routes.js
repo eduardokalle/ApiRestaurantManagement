@@ -7,10 +7,10 @@ module.exports = app => {
 
     const options = {
         definition: {
-        openapi: "0.0.8",
+        openapi: "3.0.0",
         info: {
             title: "API Base with Swagger",
-            version: "0.0.7",
+            version: "0.1.0",
             description:
             "This is a API application base and documented with Swagger",
             license: {
