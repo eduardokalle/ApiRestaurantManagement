@@ -1,22 +1,22 @@
 paths:
-  /tasks/{taskId}:
+  /user/:
   get:
-    summary: Returns task .
+    summary: Returns user all.
     parameters:
-      - name: tasks
+      - name: user
         in: path
         required: true
-        description: The task to return.
+        description: The user to return.
         schema:
           type: integer
           format: int64
           minimum: 1
-  /tasks:
+  /user:
     get:
-      summary: Returns list task.
+      summary: Returns list user.
       responses:
         '200':
-          description: data of list task.
+          description: data of list user.
           content:
             application/json:
               schema:
@@ -25,16 +25,16 @@ paths:
                   id:
                     type: integer
                     format: int64
-                    example: 12
-                  title:
+                    example: 7
+                  username:
                     type: string
-                    example: tarea 134
-                  description:
+                    example: user456
+                  email:
                     type: string
-                    example: tareas asignadas para el primer periodo
-                  published:
-                    type: bolean
-                    example: true    
+                    example: user456@mail.com
+                  roles:
+                    type: array
+                    example: [ "ROLE_USER", "ROLE_MODERATOR", "ROLE_ADMIN"]  
                   createdAt:
                     type: string
                     example: 2021-06-16T05:44:04.000Z   
@@ -42,6 +42,6 @@ paths:
                     type: string
                     example: 2021-06-16T05:44:04.000Z    
         '500':
-          description: Some error occurred while retrieving task..
+          description: Some error occurred while retrieving user..
         default:
           description: Unexpected error

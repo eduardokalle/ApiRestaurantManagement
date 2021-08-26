@@ -40,7 +40,7 @@ module.exports = function(app) {
   // Retrieve all user
   router.get(
     "/",
-    [authJwt.verifyToken, authJwt.isModeratorOrAdmin],
+    //[authJwt.verifyToken, authJwt.isModeratorOrAdmin],
      controller.findAll
   );
 
